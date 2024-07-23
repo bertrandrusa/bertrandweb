@@ -1,3 +1,3 @@
 # bertrand website:
 
-Visit it here: 
+Visit it here: https://bertrandrusa.github.io/bertrandweb/
