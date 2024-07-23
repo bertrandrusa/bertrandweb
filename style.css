@@ -1,0 +1,348 @@
+/* Header styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header img.profile-pic {
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.header .header-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.intro-p {
+    margin-top: 10px;
+}
+
+.intro-p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.intro-p a:hover {
+    text-decoration: underline;
+}
+
+.header h1 {
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    margin: 0 1rem;
+}
+
+.nav-bar a {
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.25rem;
+}
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+    background-color: #2f2f2f;
+    color: #f6f6dc;
+    transition: background-color 0.5s, color 0.5s;
+    width: 100%;
+}
+
+main {
+    padding: 0 2rem;
+}
+
+.dark-mode .container,
+.dark-mode .left-container {
+    background-color: #2f2f2f;
+    color: #f6f6dc;
+}
+
+.dark-mode .input,
+.dark-mode .textarea {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #f6f6dc;
+}
+
+.dark-mode button {
+    border: 1px solid #e0e1e1;
+    background-color: #00b4cf;
+    color: #ffffff;
+}
+
+.dark-mode button:hover {
+    opacity: 0.7;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 12;
+    position: sticky;
+    top: 1rem;
+}
+
+.top-bar a {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 1rem;
+}
+
+.top-bar button {
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #2f2f2f;
+    color: #f6f6dc;
+    border-radius: 4px;
+}
+
+.title-section,
+.subtitle-section {
+    position: relative;
+}
+
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.education,
+.experience {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    width: 100px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.date,
+.role,
+.job-desc {
+    margin: 5px 0;
+}
+
+.experience-item p {
+    margin: 0;
+}
+
+.main-section {
+    padding: 2rem;
+    padding-top: 10rem;
+    text-align: center;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.main-section h2 {
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-section p {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.team-member {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+footer {
+    padding: 2rem 1rem;
+    border-top: 1px solid #f6f6dc;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+footer div {
+    flex: 1 1 200px;
+    margin-bottom: 1rem;
+}
+
+footer h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.dark-mode .top-bar button {
+    background-color: #444;
+}
+
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    box-sizing: border-box;
+    transform: scale(0.45);
+    transform-origin: center right;
+}
+
+.button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+}
+
+.button .layer {
+    background: #00b4cf;
+    border-radius: 100px;
+    transform: scale(2);
+    transform-origin: center center;
+    transition: transform 0.35s;
+    z-index: 0;
+}
+
+.button input:checked~.layer {
+    transform: scale(1);
+}
+
+.button .knobs {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.35s;
+}
+
+.button input:checked~.knobs {
+    transform: translateX(100%);
+}
+
+.checkbox {
+    opacity: 0;
+}
