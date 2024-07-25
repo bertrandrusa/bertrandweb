@@ -1,183 +1,276 @@
-/* Header styles */
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 2rem 1rem;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.header img.profile-pic {
-    border-radius: 50%;
-    width: 550px;
-    height: 550px;
-    object-fit: cover;
-    border: 3px solid #ddd;
-}
-
-.header .header-text {
-    max-width: 600px;
-    text-align: left;
-}
-
-.intro-p {
-    margin-top: 10px;
-}
-
-.intro-p a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.intro-p a:hover {
-    text-decoration: underline;
-}
-
-.header h1 {
-    font-family: 'Clash Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 60px;
-    margin-bottom: 0.5rem;
-}
-
-.nav-bar ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-bar li {
-    margin: 0 1rem;
-}
-
-.nav-bar a {
-    font-weight: 300;
-    text-decoration: none;
-    color: inherit;
-    font-size: 1.25rem;
-}
-
+/* General styles */
 body {
     font-family: 'Satoshi', sans-serif;
     user-select: none;
     overflow-x: hidden;
-    background-color: #2f2f2f;
-    color: #f6f6dc;
+    background-color: #fbfbf0;
+    /* Default background color */
+    color: #2f2f2f;
+    /* Default text color */
     transition: background-color 0.5s, color 0.5s;
     width: 100%;
 }
 
-main {
-    padding: 0 2rem;
+.logo {
+    font-weight: bold;
+    /* Make the logo bold */
+    font-size: 1.5rem;
+    /* Adjust size as needed */
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Keep the color consistent with the text */
+    transition: color 0.3s;
+    /* Smooth color change on hover */
 }
 
-.dark-mode .container,
-.dark-mode .left-container {
-    background-color: #2f2f2f;
-    color: #f6f6dc;
+.logo:hover {
+    color: #007bff;
+    /* Optional: change color on hover */
 }
 
-.dark-mode .input,
-.dark-mode .textarea {
-    background-color: #444;
-    border: 1px solid #555;
-    color: #f6f6dc;
-}
-
-.dark-mode button {
-    border: 1px solid #e0e1e1;
-    background-color: #00b4cf;
-    color: #ffffff;
-}
-
-.dark-mode button:hover {
-    opacity: 0.7;
-}
-
-.top-bar {
+header.top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     z-index: 12;
     position: sticky;
-    top: 1rem;
+    top: 0;
+    background-color: inherit;
 }
 
-.top-bar a {
+header.top-bar .logo {
     font-weight: bold;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+nav.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav.nav-bar li {
+    margin: 0 1rem;
+}
+
+nav.nav-bar a {
+    font-weight: 300;
     text-decoration: none;
     color: inherit;
-    margin-right: 1rem;
+    font-size: 1.25rem;
+    transition: color 0.3s;
 }
 
-.top-bar button {
-    font-weight: bold;
-    text-transform: uppercase;
+nav.nav-bar a:hover {
+    color: #007bff;
+}
+
+header .hamburger {
+    display: none;
     cursor: pointer;
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: #2f2f2f;
-    color: #f6f6dc;
-    border-radius: 4px;
+    font-size: 2rem;
 }
 
-.title-section,
-.subtitle-section {
-    position: relative;
+
+/* Home Section Styles */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
+
+.profile-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 40%;
+    /* Adjust as needed */
+    height: auto;
+    border-radius: 2%;
+    border: 3px solid #ddd
+        /* Optional: a dividing line */
+}
+
+
+.header-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header-text p {
+    margin: 0.5rem 0;
+}
+
 
 .resume-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: left;
+    justify-content: flex-start;
+    /* Align to the left */
 }
 
-.education,
 .experience {
     flex: 1;
     margin-right: 20px;
+    min-width: 300px;
+    /* Ensure minimum width for responsiveness */
 }
 
 .experience-item {
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 20px;
+    padding: 15px;
+    background-color: transparent;
+    /* Light background for contrast */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: none;
+    /* Subtle shadow */
 }
 
 .company-logo {
     width: 100px;
-    margin-right: 10px;
-    vertical-align: middle;
+    /* Logo size */
+    margin-right: 15px;
+    /* Space between logo and text */
 }
 
-.date,
-.role,
-.job-desc {
-    margin: 5px 0;
+.experience-details {
+    text-align: left;
+    /* Align text to the left */
 }
 
-.experience-item p {
+.date {
+    font-style: italic;
+    /* Italics for date */
+    color: #666;
+    /* Muted color */
+    margin-bottom: 5px;
+    /* Space below date */
+}
+
+.role {
+    font-weight: bold;
+    /* Emphasize job title */
     margin: 0;
+    /* No extra margin */
+}
+
+.job-desc {
+    margin: 0;
+    /* No extra margin */
+    line-height: 1.5;
+    /* Improve readability */
+}
+
+.experience-item:last-child {
+    margin-right: 0;
+    /* Remove right margin for the last item */
+}
+
+.section-title {
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-section {
+    position: relative;
+    /* Ensure the section positions correctly */
+    overflow: hidden;
+    /* Hide any overflow */
+    padding: 2rem;
+    padding-top: 10rem;
+    text-align: center;
+    min-height: 100vh;
+    /* Maintain the height */
+}
+
+.background-video {
+    position: absolute;
+    /* Position the video absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Cover the section */
+    z-index: -1;
+    /* Send the video behind the content */
+}
+
+h2,
+h1,
+p {
+    position: relative;
+    /* Position text above the video */
+    color: #444;
+    /* Change text color for visibility */
+    z-index: 1;
+    /* Ensure text appears above the video */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav.nav-bar ul {
+        flex-direction: column;
+        display: none;
+        /* Hide by default */
+        position: absolute;
+        /* Position the menu */
+        right: 0;
+        /* Align to the right */
+        background-color: #fbfbf0;
+        /* Match background color */
+        padding: 1rem;
+        /* Add padding for better touch targets */
+        z-index: 10;
+        /* Ensure it appears above other elements */
+    }
+
+    nav.nav-bar ul.active {
+        display: flex;
+        /* Show when active */
+    }
+
+    header .hamburger {
+        display: block;
+        /* Show hamburger icon */
+    }
 }
 
 .main-section {
     padding: 2rem;
     padding-top: 10rem;
     text-align: center;
-    height: 100vh;
     min-height: 100vh;
+    /* Ensure it remains full height */
+    background-color: transparent;
+    /* Prevent unwanted backgrounds */
 }
+
 
 .main-section h2 {
     font-family: 'Clash Grotesk', sans-serif;
@@ -201,148 +294,43 @@ main {
 .swiper-slide {
     background-size: cover;
     background-position: center;
+    height: 300px;
+    /* Set a fixed height for the slides */
 }
 
-.team {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem 1rem;
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-.team-member {
-    flex: 1 1 200px;
-    text-align: center;
-}
-
-footer {
-    padding: 2rem 1rem;
-    border-top: 1px solid #f6f6dc;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
-}
-
-footer div {
-    flex: 1 1 200px;
-    margin-bottom: 1rem;
-}
-
-footer h2 {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer li {
+.contact-form label {
+    display: block;
     margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
-footer a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.dark-mode .top-bar button {
-    background-color: #444;
-}
-
-.toggle-button-cover {
-    display: table-cell;
-    position: relative;
-    box-sizing: border-box;
-    transform: scale(0.45);
-    transform-origin: center right;
-}
-
-.button-cover {
-    height: 100px;
-    margin: 20px;
-    background-color: #fff;
-    box-shadow: 0 10px 20px -8px #c5d6d6;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.button-cover:before {
-    counter-increment: button-counter;
-    content: counter(button-counter);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #d7e3e3;
-    font-size: 12px;
-    line-height: 1;
-    padding: 5px;
+.contact-form button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.button-cover,
-.knobs,
-.layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.button {
-    position: relative;
-    top: 50%;
-    width: 74px;
-    height: 36px;
-    margin: -20px auto 0 auto;
-    overflow: hidden;
-}
-
-.button.r,
-.button.r .layer {
-    border-radius: 100px;
-}
-
-.button .layer {
-    background: #00b4cf;
-    border-radius: 100px;
-    transform: scale(2);
-    transform-origin: center center;
-    transition: transform 0.35s;
-    z-index: 0;
-}
-
-.button input:checked~.layer {
-    transform: scale(1);
-}
-
-.button .knobs {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    border-radius: 50%;
-    transition: all 0.35s;
-}
-
-.button input:checked~.knobs {
-    transform: translateX(100%);
-}
-
-.checkbox {
-    opacity: 0;
+.contact-form button:hover {
+    background-color: #0056b3;
 }
