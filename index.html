@@ -4,77 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark">
-    <meta name="supported-color-schemes" content="dark">
-    <title>Bertrand Rusanganwa's Portfolio</title>
+    <title>Bertrand Rusanganwa's Portfolio 😁</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!-- FontShare for custom fonts -->
-    <link rel="stylesheet"
-        href="https://api.fontshare.com/css?f[]=satoshi@1,300,301,700&f[]=clash-grotesk@1,200,201,600&f[]=quicksand@1,500,600,700&display=swap">
-
-    <!-- Locomotive Scroll CSS for smooth scrolling -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-
-    <!-- Swiper CSS for slider functionality -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-
-    <!-- External CSS file -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/gsap"></script>
+    <script src="https://unpkg.com/locomotive-scroll"></script>
 </head>
 
-<body class="dark-mode">
-    <main data-scroll-container class="content" id="top">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div>
-                <a class="go" href="#top">BR</a>
-            </div>
-            <div id="dark-mode-toggle" class="toggle-button-cover">
+<body>
+    <header class="top-bar">
+        <a href="#home" class="logo">BR</a>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">&#9776;</div>
+    </header>
 
-                <input type="checkbox" class="checkbox" checked>
-                <div class="knobs"></div>
-                <div class="layer"></div>
-            </div>
-        </div>
-        </div>
-
-        <!-- Header Section -->
-        <header class="header title-section">
-            <div class="header-content">
-                <img src="images/profile.jpg" alt="Bertrand Rusanganwa" class="profile-pic">
-                <div class="header-text">
-                    <h1 class="main-title">MEET THE Bertrand Rusanganwa</h1>
-                    <p class="header-subtitle">A Passionate Software Engineer & AI Enthusiast</p>
-                    <div class="intro-p">
-                        <p>Welcome to my website! For a PDF copy of my resume, please check out this link
-                            <a href="bertrand_resume.pdf">here</a>.
-                        </p>
-                    </div>
+    <!-- Home Section -->
+    <section id="home" class="header title-section">
+        <div class="header-content">
+            <img src="images/profile.jpg" alt="Bertrand Rusanganwa" class="profile-pic">
+            <div class="header-text">
+                <h1 class="main-title">MEET THE Bertrand Rusanganwa</h1>
+                <p class="header-subtitle"> That computer scientist guy</p>
+                <div class="intro-p">
+                    <p>Welcome to my website! For a PDF copy of my resume, please check out this link
+                        <a href="Copy ofBertrinho resume (2).pdf">here</a>.
+                    </p>
                 </div>
             </div>
-            <!-- Navigation Bar -->
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        </div>
+    </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="main-section subtitle-section">
-            <div>
-                <h2 class="section-title">About Me</h2>
-                <p class="section-description">
-                    I am currently pursuing a Bachelor of Science in Computer Science with a Minor in Mathematics at
-                    Missouri State University. My focus is on artificial intelligence and machine learning. I’ve
-                    interned
-                    at the Rwanda Space Agency and worked on various projects, including a Banking Simulation Project,
-                    where I gained valuable experience and skills.
-                </p>
-            </div>
+    <main data-scroll-container>
+        <section id="about" class="main-section">
+            <video autoplay loop muted class="background-video">
+                <source src="WhatsApp Video 2024-07-24 at 23.28.04.mp4" type="video/mp4">
+
+            </video>
+            <h2>About</h2>
+            <h1>"DO WHAT YOU LOVE, LOVE WHAT YOU DO."</h1>
+            <p>I’m a student at Missouri State University, going for a Bachelor of Science
+                in Computer Science and Mathematics. You know, I’ve got this crazy passion for
+                technology—like, I can’t get enough of it! </p>
+
+
+            <p>Now, let’s be real: anyone can learn to code. But im trying to be the problem solver,
+                So if you’ve got issues, I’ve got solutions!</p>
+
+
+        </section>
         </section>
 
         <!-- Experience Section -->
@@ -83,20 +69,24 @@
                 <h2 class="section-title">Experience</h2>
                 <div class="resume-content">
                     <div class="experience">
-                        <h3>Work Experience</h3>
                         <div class="experience-item">
                             <img src="images/msu.png" alt="MSU" class="company-logo">
-                            <p class="date">May - August 2023</p>
-                            <p class="role">Software Engineering Intern</p>
-                            <p class="job-desc">Contributed to various projects on the AI Tooling Team at Missouri State
-                                University, gaining hands-on experience in software engineering and AI technologies.</p>
+                            <div class="experience-details">
+                                <p class="date">May - August 2023</p>
+                                <p class="role">Software Engineering Intern</p>
+                                <p class="job-desc">Contributed to various projects on the AI Tooling Team at Missouri
+                                    State University, gaining hands-on experience in software engineering and AI
+                                    technologies.</p>
+                            </div>
                         </div>
                         <div class="experience-item">
                             <img src="images/rwanda_space_agency.png" alt="RSA" class="company-logo">
-                            <p class="date">September - December 2022</p>
-                            <p class="role">Software Developer Intern</p>
-                            <p class="job-desc">Developed a Java package for data pipeline integration at Alexa AI,
-                                utilizing AWS services for data analysis and visualization.</p>
+                            <div class="experience-details">
+                                <p class="date">September - December 2022</p>
+                                <p class="role">Software Developer Intern</p>
+                                <p class="job-desc">Developed a Java package for data pipeline integration at Alexa AI,
+                                    utilizing AWS services for data analysis and visualization.</p>
+                            </div>
                         </div>
                         <!-- Add more experience items as needed -->
                     </div>
@@ -104,64 +94,46 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h3>Contact Me</h3>
-            <form id="contact-form" method="post" action="send_mail.php">
-                <div class="contact-section">
-                    <div class="container">
-                        <div class="form-container">
-                            <div class="left-container">
-                                <div class="left-inner-container">
-                                    <h2>Let's Chat</h2>
-                                    <p>Whether you have a question, want to start a project, or simply want to connect.
-                                    </p>
-                                    <br>
-                                    <p>Feel free to send me a message in the contact form</p>
-                                </div>
-                            </div>
-                            <div class="right-container">
-                                <div class="right-inner-container">
-                                    <p>* Required</p>
-                                    <div class="social-container">
-                                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                    <input type="text" placeholder="Name *" />
-                                    <input type="email" placeholder="Email *" />
-                                    <textarea rows="4" placeholder="Message"></textarea>
-                                    <button type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+
+        <section id="projects" class="main-section">
+            <h2>Projects</h2>
+            <p>Check out some of my recent projects.</p>
+
+            <!-- Swiper -->
+            <div class="swiper-container swiper-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url('/path/to/image1.jpg')"></div>
+                    <div class="swiper-slide" style="background-image:url('/path/to/image2.jpg')"></div>
+                    <div class="swiper-slide" style="background-image:url('/path/to/image3.jpg')"></div>
                 </div>
-            </form>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
 
-        <!-- Footer Section -->
-        <footer>
-            <div>
-                <h2>Let's Connect</h2>
-                <ul>
-                    <li><a href="https://twitter.com/bertrand" target="_blank">Github</a></li>
-                    <li><a href="https://linkedin.com/in/bertrand-rusanganwa" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://instagram.com/bertrand" target="_blank">Instagram</a></li>
+        <section id="contact" class="main-section">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-                </ul>
-            </div>
-        </footer>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
 
-    <!-- Locomotive Scroll JS for smooth scrolling -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <footer>
+        <div>© 2024 Bertrand 🌟Agency</div>
+    </footer>
 
-    <!-- Swiper JS for slider functionality -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Custom JS file -->
     <script src="main.js"></script>
 </body>
 
