@@ -296,8 +296,14 @@ nav.nav-bar a:hover {
    ======================= */
 
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    gap: 10px; /* Adds space between the texts */
     padding: 1rem;
     background-color: #fff;
     color: #333;
+    font-size: 1rem;
+    font-weight: 500;
 }
+
