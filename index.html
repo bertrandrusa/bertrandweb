@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bertrand Rusanganwa's Portfolio 😁</title>
+    <title>Bertrand's Portfolio 😁</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- External Libraries -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/gsap"></script>
@@ -33,7 +39,7 @@
             <img src="images/profile.jpg" alt="Bertrand Rusanganwa" class="profile-pic">
             <div class="header-text">
                 <h1 class="main-title">MEET Bertrand Rusanganwa</h1>
-                <p class="header-subtitle"> That computer scientist guy</p>
+                <p class="header-subtitle">I can creat stuff sometimes</p>
                 <div class="intro-p">
                     <p>Welcome to my website! For a PDF copy of my resume, please check out this link
                         <a href="Copy of Bertrand resume (2).pdf">here</a>.
@@ -44,27 +50,36 @@
     </section>
 
     <main data-scroll-container>
-        <section id="about" class="main-section">
-            <video autoplay loop muted class="background-video">
-                <source src="WhatsApp Video 2024-07-24 at 23.28.04.mp4" type="video/mp4">
+        <!-- About Section -->
+        <section id="about" class="main-section" data-scroll-section>
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="row align-items-center">
+                    <!-- Left Side - Text Content -->
+                    <div class="col-md-6 about-text">
 
-            </video>
-            <h2>About</h2>
-            <h1>"DO WHAT YOU LOVE, LOVE WHAT YOU DO."</h1>
-            <p>I’m a student at Missouri State University, going for a Bachelor of Science
-                in Computer Science and Mathematics. You know, I’ve got this crazy passion for
-                technology—like, I can’t get enough of it! </p>
+                        <!-- <h1>"Keep going. The moment will come."</h1>-->
 
+                        <p>I'm a student at Missouri State University, studying Computer Science and Mathematics.</p>
 
-            <p>Now, let’s be real: anyone can learn to code. But im trying to be the problem solver,
-                So if you’ve got issues, I’ve got solutions!</p>
+                        <p>Life, like football, is full of twists. Sometimes, it feels like you're losing.
+                            But the best moments happen when you hold on till the end</p>
 
+                    </div>
 
+                    <!-- Right Side - Video -->
+                    <div class="col-md-6 about-video">
+                        <video autoplay loop muted class="aguero-video">
+                            <source src="aguero.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
         </section>
-        </section>
+
 
         <!-- Experience Section -->
-        <section id="experience" class="main-section resume">
+        <section id="experience" class="main-section resume" data-scroll-section>
             <div class="container">
                 <h2 class="section-title">Experience</h2>
                 <div class="resume-content">
@@ -74,8 +89,10 @@
                             <div class="experience-details">
                                 <p class="date">August 2022 - present</p>
                                 <p class="role">Resident Assistant</p>
-                                <p class="job-desc"> Successfully coordinated over 35 residents annually through community engagement initiatives.,
-                                                     Fostered inclusive community with effective communication to boost resident satisfaction. </p>
+                                <p class="job-desc">Successfully coordinated over 35 residents annually through
+                                    community engagement initiatives.
+                                    Fostered an inclusive community with effective communication to boost resident
+                                    satisfaction.</p>
                             </div>
                         </div>
                         <div class="experience-item">
@@ -83,26 +100,23 @@
                             <div class="experience-details">
                                 <p class="date">May - July 2023</p>
                                 <p class="role">Student Intern</p>
-                                <p class="job-desc">Enhanced application performance by refactoring code for a 20% speed increase and collaborated on the Geospatial Data Hub, 
-                                    utilizing Earth Observation data for informed decision-making., Worked with the software development team to design and implement
-                                    features focusing on utilizing space technology for Sustainable Development Goals.</p>
+                                <p class="job-desc">Enhanced application performance by refactoring code for a 20% speed
+                                    increase and collaborated on the Geospatial Data Hub,
+                                    utilizing Earth Observation data for informed decision-making.
+                                    Worked with the software development team to design and implement
+                                    features focusing on utilizing space technology for Sustainable Development Goals.
+                                </p>
                             </div>
                         </div>
-                      
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-
-
-        <section id="projects" class="main-section">
+        <!-- Projects Section -->
+        <section id="projects" class="main-section" data-scroll-section>
             <h2>Projects</h2>
             <p>Check out some of my recent projects.</p>
-
-            <!-- Swiper -->
             <div class="swiper-container swiper-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image:url('/path/to/image1.jpg')"></div>
@@ -113,28 +127,44 @@
             </div>
         </section>
 
-        <section id="contact" class="main-section">
-            <h2>Contact</h2>
-            <form class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <!-- Contact Section -->
+        <section id="contact" class="py-5" data-scroll-section>
+            <div class="container">
+                <h2 class="text-center mb-4">Contact</h2>
+                <div class="row text-center">
+                    <div class="col-md-3 mb-4">
+                        <a href="https://www.linkedin.com/in/bertrandrusa" target="_blank" class="social-icon">
+                            <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="mailto:bertrandrusanganwa10@gmail.com" class="social-icon">
+                            <i class="bi bi-envelope" style="font-size: 2rem;"></i>
+                        </a>
+                    </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                    <div class="col-md-3 mb-4">
+                        <a href="https://github.com/bertrandrusa" target="_blank" class="social-icon">
+                            <i class="bi bi-github" style="font-size: 2rem;"></i>
+                        </a>
+                    </div>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="col-md-3 mb-4">
+                        <a href="https://www.instagram.com/bertrandrusa" target="_blank" class="social-icon">
+                            <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+                        </a>
+                    </div>
 
-                <button type="submit">Send</button>
-            </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div>© 2024 Bertrand 🌟Agency</div>
+        <div>© Built and designed by Bertrand.</div>
+        <div>All rights reserved.</div>
     </footer>
 
-    <script src="main.js"></script>
 </body>
 
 </html>
