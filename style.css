@@ -20,6 +20,7 @@ body.dark-mode {
 /* ===========================
    3D RESUME BUTTON (SITE BLUE)
    =========================== */
+/* 3D RESUME BUTTON - BLUE (#007bff) */
 
 .container-button{
   display:grid;
@@ -63,6 +64,7 @@ body.dark-mode {
   text-decoration:none;
   font-size:17px;
   font-weight:900;
+  letter-spacing:0.5px;
 
   border:3px solid #007bff;
   border-radius:14px;
@@ -72,7 +74,6 @@ body.dark-mode {
   transform-style:preserve-3d;
 }
 
-/* BLUE BACKGROUND */
 .resume-btn::before{
   content:"";
   position:absolute;
@@ -83,7 +84,6 @@ body.dark-mode {
   transition:all 0.25s ease;
 }
 
-/* 3D TILT */
 .bt-1:hover ~ .resume-btn{
   transform:rotateX(14deg) rotateY(-14deg);
   box-shadow:-3px -3px 0 #0056b3;
@@ -104,13 +104,8 @@ body.dark-mode {
   box-shadow:3px 3px 0 #0056b3;
 }
 
-/* HOVER DARKER BLUE */
 .container-button:hover .resume-btn::before{
   background:#0056b3;
-}
-
-.container-button:not(:hover) .resume-btn{
-  transform:rotateX(0) rotateY(0);
 }
 
 
