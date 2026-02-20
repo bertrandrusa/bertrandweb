@@ -17,25 +17,32 @@ body.dark-mode {
     color: #f6f6dc;
 }
 
-/* RESUME 3D BUTTON */
+/* ===========================
+   3D RESUME BUTTON (BLUE)
+   =========================== */
+
 .container-button{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr;
   grid-template-areas:
     "bt-1 bt-2 bt-3"
     "bt-4 bt-5 bt-6";
   position:relative;
-  perspective:800px;
-  width:160px;
-  height:50px;
+  perspective:900px;
+  width:170px;
+  height:52px;
   margin-top:15px;
+  transition:transform 0.2s ease;
 }
 
-.container-button:active{ transform:scale(0.97); }
+.container-button:active{
+  transform:scale(0.96);
+}
 
+/* Hover grid zones */
 .hover{
-  position:relative;    /* IMPORTANT: not absolute */
+  position:relative;
   width:100%;
   height:100%;
   z-index:2;
@@ -48,40 +55,70 @@ body.dark-mode {
 .bt-5{ grid-area:bt-5; }
 .bt-6{ grid-area:bt-6; }
 
-.resume-btn{background: red !important;}
+/* Actual button */
+.resume-btn{
   position:absolute;
   inset:0;
-  display:flex;         /* centers text */
+  display:flex;
   align-items:center;
   justify-content:center;
 
   text-decoration:none;
   font-size:17px;
   font-weight:900;
+  letter-spacing:0.5px;
 
-  border:3px solid #f39923;
-  border-radius:12px;
+  border:3px solid #007bff;
+  border-radius:14px;
   color:#fff;
-  z-index:1;            /* stays clickable */
-  transition:all 0.3s ease-in-out;
+  z-index:1;
+  transition:all 0.25s ease;
+  transform-style:preserve-3d;
 }
 
+/* Button background layer */
 .resume-btn::before{
   content:"";
   position:absolute;
   inset:0;
-  background:#f5ae51;
-  border-radius:12px;
+  background:#007bff;
+  border-radius:14px;
   z-index:-1;
-  transition:all 0.3s ease-in-out;
+  transition:all 0.25s ease;
 }
 
-.bt-1:hover ~ .resume-btn{ transform:rotateX(15deg) rotateY(-15deg); box-shadow:-2px -2px #18181888; }
-.bt-3:hover ~ .resume-btn{ transform:rotateX(15deg) rotateY(15deg);  box-shadow: 2px -2px #18181888; }
-.bt-4:hover ~ .resume-btn{ transform:rotateX(-15deg) rotateY(-15deg); box-shadow:-2px  2px #18181888; }
-.bt-6:hover ~ .resume-btn{ transform:rotateX(-15deg) rotateY(15deg);  box-shadow: 2px  2px #18181888; }
+/* ===== 3D Tilt Directions ===== */
 
-.container-button:hover .resume-btn::before{ background:#f19c2b; }
+.bt-1:hover ~ .resume-btn{
+  transform:rotateX(14deg) rotateY(-14deg);
+  box-shadow:-3px -3px 0 #003f8a;
+}
+
+.bt-3:hover ~ .resume-btn{
+  transform:rotateX(14deg) rotateY(14deg);
+  box-shadow:3px -3px 0 #003f8a;
+}
+
+.bt-4:hover ~ .resume-btn{
+  transform:rotateX(-14deg) rotateY(-14deg);
+  box-shadow:-3px 3px 0 #003f8a;
+}
+
+.bt-6:hover ~ .resume-btn{
+  transform:rotateX(-14deg) rotateY(14deg);
+  box-shadow:3px 3px 0 #003f8a;
+}
+
+/* Hover color change */
+.container-button:hover .resume-btn::before{
+  background:#0056b3;
+}
+
+/* Smooth reset */
+.container-button:not(:hover) .resume-btn{
+  transform:rotateX(0) rotateY(0);
+}
+
 
 
 /* =======================
