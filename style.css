@@ -48,7 +48,7 @@ body.dark-mode {
 .bt-5{ grid-area:bt-5; }
 .bt-6{ grid-area:bt-6; }
 
-.resume-btn{
+.resume-btn{background: red !important;}
   position:absolute;
   inset:0;
   display:flex;         /* centers text */
