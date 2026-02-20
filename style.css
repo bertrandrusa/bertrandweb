@@ -210,15 +210,17 @@ body.dark-mode .experience-item:hover {
 }
 
 .company-logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    transform: scale(1.15);   /* zoom level */
     border-radius: 12px;
     background: #fff;
-    padding: 8px;
+    padding: 0;
     border: 1px solid rgba(0,0,0,0.08);
     margin-right: 15px;
 }
+
 
 body.dark-mode .company-logo {
     background: #3a3a3a;
