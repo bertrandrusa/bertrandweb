@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     background-color: #fbfbf0;
     color: #2f2f2f;
-    transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.5s, color 0.5s;
     width: 100%;
 }
 
@@ -19,7 +19,7 @@ body.dark-mode {
 
 
 /* =======================
-   NAVBAR
+   NAVIGATION BAR
    ======================= */
 
 header.top-bar {
@@ -30,14 +30,15 @@ header.top-bar {
     position: sticky;
     top: 0;
     background-color: inherit;
-    z-index: 100;
+    z-index: 12;
 }
 
 .logo {
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s;
 }
 
 .logo:hover {
@@ -46,6 +47,7 @@ header.top-bar {
 
 nav.nav-bar ul {
     display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -56,27 +58,27 @@ nav.nav-bar li {
 }
 
 nav.nav-bar a {
+    font-weight: 300;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 1.15rem;
     color: inherit;
-    transition: 0.2s;
+    font-size: 1.25rem;
+    transition: color 0.3s;
 }
 
 nav.nav-bar a:hover {
     color: #007bff;
 }
 
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 
 /* =======================
-   MOBILE NAV
+   MOBILE NAVIGATION
    ======================= */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
 
 @media (max-width: 768px) {
 
@@ -86,10 +88,10 @@ nav.nav-bar a:hover {
         position: absolute;
         right: 10px;
         top: 70px;
-        background: #fbfbf0;
+        background-color: #fbfbf0;
         padding: 1rem;
         border-radius: 12px;
-        border: 1px solid rgba(0,0,0,0.08);
+        z-index: 10;
     }
 
     nav.nav-bar ul.active {
@@ -97,18 +99,25 @@ nav.nav-bar a:hover {
     }
 
     body.dark-mode nav.nav-bar ul {
-        background: #2f2f2f;
-        border-color: rgba(255,255,255,0.2);
+        background-color: #2f2f2f;
     }
 
     .hamburger {
         display: block;
     }
+
+    #contact .row {
+        flex-direction: column;
+    }
+
+    #contact .col-md-3 {
+        margin-bottom: 20px;
+    }
 }
 
 
 /* =======================
-   HOME
+   HOME SECTION
    ======================= */
 
 .header-content {
@@ -120,33 +129,37 @@ nav.nav-bar a:hover {
 }
 
 .profile-pic {
-    width: 300px;
-    border-radius: 8px;
+    width: 40%;
+    height: auto;
+    border-radius: 2%;
     border: 3px solid #ddd;
 }
 
 .header-text {
     padding: 20px;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.main-title {
-    font-size: 2.2rem;
-    font-weight: 700;
+.header-text h1 {
+    font-size: 2rem;
 }
 
-.header-subtitle {
-    font-size: 1.2rem;
-    opacity: 0.85;
+.header-text p {
+    margin: 0.5rem 0;
 }
 
 
 /* =======================
-   SECTIONS
+   MAIN SECTIONS
    ======================= */
 
 .main-section {
+    position: relative;
+    overflow: hidden;
     padding: 5rem 2rem;
+    text-align: center;
     min-height: 100vh;
 }
 
@@ -155,75 +168,101 @@ nav.nav-bar a:hover {
     margin-bottom: 2rem;
 }
 
+.main-section h2,
+.main-section h1,
+.main-section p {
+    position: relative;
+    z-index: 1;
+}
+
 
 /* =======================
-   ABOUT
+   ABOUT SECTION
    ======================= */
 
 #about {
-    background: #f8f9fa;
+    padding: 80px 0;
+    background-color: #f8f9fa;
 }
 
 body.dark-mode #about {
-    background: #353535;
+    background-color: #353535;
 }
 
 .about-text {
     text-align: left;
+    padding-right: 30px;
 }
 
-.about-video video {
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-text h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aguero-video {
     width: 100%;
-    border-radius: 12px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .about-text {
+        text-align: center;
+        padding: 0;
+    }
+
+    .about-video {
+        margin-top: 20px;
+    }
 }
 
 
 /* =======================
-   EXPERIENCE
+   EXPERIENCE SECTION
    ======================= */
 
 .resume-content {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .experience {
-    max-width: 800px;
-    width: 100%;
+    flex: 1;
+    margin-right: 20px;
+    min-width: 300px;
 }
 
 .experience-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding: 15px;
-    border-radius: 12px;
-    transition: 0.2s;
-}
-
-.experience-item:hover {
-    background: rgba(0,0,0,0.03);
-}
-
-body.dark-mode .experience-item:hover {
-    background: rgba(255,255,255,0.05);
 }
 
 .company-logo {
-    width: 85px;
-    height: 85px;
-    object-fit: cover;
-    transform: scale(1.15);   /* zoom level */
-    border-radius: 12px;
-    background: #fff;
-    padding: 0;
-    border: 1px solid rgba(0,0,0,0.08);
+    width: 100px;      /* ORIGINAL SIZE RESTORED */
+    height: auto;      /* keep natural ratio */
     margin-right: 15px;
-}
-
-
-body.dark-mode .company-logo {
-    background: #3a3a3a;
 }
 
 .experience-details {
@@ -232,29 +271,29 @@ body.dark-mode .company-logo {
 
 .date {
     font-style: italic;
-    font-size: 0.9rem;
-    opacity: 0.7;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 .role {
-    font-weight: 700;
-    margin: 3px 0;
+    font-weight: bold;
 }
 
 .job-desc {
-    margin-top: 6px;
     padding-left: 18px;
+    margin-top: 6px;
 }
 
 .job-desc li {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 
 /* =======================
-   PROJECTS (SWIPER)
+   PROJECTS SECTION
    ======================= */
 
+.swiper-container,
 .swiper-slider,
 .swiper {
     width: 100%;
@@ -262,10 +301,10 @@ body.dark-mode .company-logo {
 }
 
 .swiper-slide {
-    height: 320px;
-    border-radius: 16px;
     background-size: cover;
     background-position: center;
+    height: 300px;
+    border-radius: 12px;
 }
 
 
@@ -274,8 +313,8 @@ body.dark-mode .company-logo {
    ======================= */
 
 #contact i {
-    color: inherit;
-    transition: 0.2s;
+    font-size: 2rem;
+    transition: 0.3s;
 }
 
 #contact i:hover {
@@ -290,12 +329,16 @@ body.dark-mode .company-logo {
 footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     padding: 1rem;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
     font-weight: 500;
-    background: #fff;
 }
 
 body.dark-mode footer {
-    background: #2f2f2f;
+    background-color: #2f2f2f;
+    color: #f6f6dc;
 }
