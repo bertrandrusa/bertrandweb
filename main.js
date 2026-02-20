@@ -2,7 +2,6 @@
    MAIN.JS
    ========================= */
 
-// Run after DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================
@@ -31,18 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
         navList.classList.remove("active");
       }
     });
-  }
-document.querySelectorAll(".container-button").forEach((wrap) => {
-  const link = wrap.querySelector(".resume-btn");
-  if (!link) return;
+  } // ✅ THIS BRACE WAS MISSING
 
-  wrap.addEventListener("click", (e) => {
-    // if user clicks anywhere on the 3D button area, open the link
-    window.open(link.href, "_blank");
+
+  /* =========================
+     RESUME 3D BUTTON CLICK (click anywhere opens link)
+     ========================= */
+  document.querySelectorAll(".container-button").forEach((wrap) => {
+    const link = wrap.querySelector(".resume-btn");
+    if (!link) return;
+
+    wrap.addEventListener("click", () => {
+      window.open(link.href, "_blank");
+    });
   });
-});
 
-   
+
   /* =========================
      DARK MODE TOGGLE (GSAP + fallback)
      ========================= */
@@ -53,7 +56,6 @@ document.querySelectorAll(".container-button").forEach((wrap) => {
   if (savedTheme === "dark") document.body.classList.add("dark-mode");
 
   const animateTheme = (isDark) => {
-    // If GSAP is available, animate smoothly
     if (typeof gsap !== "undefined") {
       gsap.to(document.body, {
         backgroundColor: isDark ? "#2f2f2f" : "#fbfbf0",
@@ -82,7 +84,6 @@ document.querySelectorAll(".container-button").forEach((wrap) => {
 
   /* =========================
      SWIPER INIT
-     - Works with your existing HTML class: .swiper-slider
      ========================= */
   if (typeof Swiper !== "undefined") {
     const sliderEl = document.querySelector(".swiper-slider");
@@ -143,7 +144,7 @@ document.querySelectorAll(".container-button").forEach((wrap) => {
     });
   });
 
-  // Optional: clicking the logo scrolls to #home
+  // Clicking the logo scrolls to #home
   const logoLink = document.querySelector('a.logo[href="#home"]');
   if (logoLink) {
     logoLink.addEventListener("click", (e) => {
@@ -160,3 +161,4 @@ document.querySelectorAll(".container-button").forEach((wrap) => {
   }
 
 });
+
