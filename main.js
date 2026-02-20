@@ -5,7 +5,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================
-     MOBILE NAV (matches your CSS: nav.nav-bar ul.active)
+     MOBILE NAV
      ========================= */
   const hamburger = document.querySelector(".hamburger");
   const navList = document.querySelector("nav.nav-bar ul");
@@ -15,14 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
       navList.classList.toggle("active");
     });
 
-    // Close menu when clicking a nav link (mobile)
     navList.querySelectorAll("a").forEach((a) => {
       a.addEventListener("click", () => {
         navList.classList.remove("active");
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
       const clickedInsideNav = navList.contains(e.target);
       const clickedHamburger = hamburger.contains(e.target);
@@ -30,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         navList.classList.remove("active");
       }
     });
-  } // ✅ THIS BRACE WAS MISSING
+  }
 
 
   /* =========================
-     RESUME 3D BUTTON CLICK (click anywhere opens link)
+     RESUME BUTTON CLICK
      ========================= */
   document.querySelectorAll(".container-button").forEach((wrap) => {
     const link = wrap.querySelector(".resume-btn");
@@ -47,11 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =========================
-     DARK MODE TOGGLE (GSAP + fallback)
+     DARK MODE TOGGLE
      ========================= */
   const darkToggle = document.getElementById("dark-mode-toggle");
 
-  // Load saved preference
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") document.body.classList.add("dark-mode");
 
@@ -83,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =========================
-     SWIPER INIT
+     SWIPER (NO PROGRESS BAR)
      ========================= */
   if (typeof Swiper !== "undefined") {
     const sliderEl = document.querySelector(".swiper-slider");
@@ -99,10 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar"
         }
       });
     }
@@ -110,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =========================
-     LOCOMOTIVE SCROLL + NAV SMOOTH SCROLL FALLBACK
+     LOCOMOTIVE SCROLL + SMOOTH NAV
      ========================= */
   let scroller = null;
 
@@ -124,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Smooth scroll for nav links
   document.querySelectorAll(".nav-bar a").forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       e.preventDefault();
@@ -144,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Clicking the logo scrolls to #home
   const logoLink = document.querySelector('a.logo[href="#home"]');
   if (logoLink) {
     logoLink.addEventListener("click", (e) => {
@@ -161,4 +152,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
