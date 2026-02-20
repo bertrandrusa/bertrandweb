@@ -3,22 +3,22 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JB1JZHND8H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JB1JZHND8H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JB1JZHND8H');
+    </script>
 
-  gtag('config', 'G-JB1JZHND8H');
-</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bertrand's Portfolio 😁</title>
+
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap CSS & Icons -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
@@ -30,32 +30,33 @@
 </head>
 
 <body>
-    <header class="top-bar">
-        <a href="#home" class="logo">BR</a>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger">&#9776;</div>
-    </header>
 
-    <!-- Home Section -->
+<header class="top-bar">
+    <a href="#home" class="logo">BR</a>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+</header>
+
+<!-- ================= HOME ================= -->
 <section id="home" class="header title-section">
     <div class="header-content">
         <img src="images/profile.jpg" alt="Bertrand Rusanganwa" class="profile-pic">
+
         <div class="header-text">
             <h1 class="main-title">MEET Bertrand Rusanganwa</h1>
-            <p class="header-subtitle">I can create stuff sometimes</p>
+            <p class="header-subtitle">I build backend systems and AI-powered applications.</p>
 
             <div class="intro-p">
-                <p>
-                    Welcome to my website! For a PDF copy of my resume:
-                </p>
+                <p>For a PDF copy of my resume:</p>
 
+                <!-- 3D Resume Button -->
                 <div class="container-button">
                     <div class="hover bt-1"></div>
                     <div class="hover bt-2"></div>
@@ -64,50 +65,40 @@
                     <div class="hover bt-5"></div>
                     <div class="hover bt-6"></div>
 
-                    <a href="Bertrand_resume.pdf"
-                       target="_blank"
-                       class="resume-btn">
+                    <a href="Bertrand_resume.pdf" target="_blank" class="resume-btn">
                         View Resume
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
 
-    <main data-scroll-container>
-        <!-- About Section -->
-        <section id="about" class="main-section" data-scroll-section>
-            <div class="container">
-                <h2 class="section-title">About</h2>
-                <div class="row align-items-center">
-                    <!-- Left Side - Text Content -->
-                    <div class="col-md-6 about-text">
+<main data-scroll-container>
 
-                        <!-- <h1>"Keep going. The moment will come."</h1>-->
+<!-- ================= ABOUT ================= -->
+<section id="about" class="main-section" data-scroll-section>
+    <div class="container">
+        <h2 class="section-title">About</h2>
 
-                        <p>I'm a student at Missouri State University, studying Computer Science and Mathematics.</p>
-
-                        <p>Life, like football, is full of twists. Sometimes, it feels like you're losing.
-                            But the best moments happen when you hold on till the end.</p>
-
-                    </div>
-
-                    <!-- Right Side - Video -->
-                    <div class="col-md-6 about-video">
-                        <video autoplay loop muted class="aguero-video">
-                            <source src="aguero.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
+        <div class="row align-items-center">
+            <div class="col-md-6 about-text">
+                <p>I'm a Computer Science student at Missouri State University focused on backend engineering, data systems, and AI-powered applications.</p>
+                <p>I enjoy building scalable systems, optimizing databases, and turning raw data into useful tools.</p>
             </div>
-        </section>
+
+            <div class="col-md-6 about-video">
+                <video autoplay loop muted class="aguero-video">
+                    <source src="aguero.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-        <!-- Experience Section -->
-        <!-- Experience Section -->
+<!-- ================= EXPERIENCE ================= -->
 <section id="experience" class="main-section resume" data-scroll-section>
     <div class="container">
         <h2 class="section-title">Experience</h2>
@@ -122,9 +113,9 @@
                         <p class="date">Jan 2025 – Present</p>
                         <p class="role">Software Engineer Intern — TuningSQL</p>
                         <ul class="job-desc">
-                            <li>Develop automated ETL pipelines using Python, Pandas, and SQL to extract and transform unstructured data from PDFs and web sources into structured datasets.</li>
-                            <li>Optimize PostgreSQL queries, indexing strategies, and schema design to reduce latency and improve backend performance as data scales.</li>
-                            <li>Containerize backend and data-processing services with Docker, creating reproducible environments and streamlining deployment workflows.</li>
+                            <li>Develop automated ETL pipelines using Python, Pandas, and SQL to transform unstructured data into structured datasets.</li>
+                            <li>Optimize PostgreSQL queries, indexing, and schema design to improve backend performance.</li>
+                            <li>Containerize services with Docker to create reproducible environments and streamline deployments.</li>
                         </ul>
                     </div>
                 </div>
@@ -136,8 +127,8 @@
                         <p class="date">Aug 2022 – Present</p>
                         <p class="role">Resident Assistant — Missouri State University</p>
                         <ul class="job-desc">
-                            <li>Lead and support a community of 35+ residents through event planning, mentorship, and conflict resolution.</li>
-                            <li>Foster an inclusive environment through proactive communication and engagement initiatives that improve resident satisfaction.</li>
+                            <li>Lead and support a community of 35+ residents through mentorship and event planning.</li>
+                            <li>Promote an inclusive environment through proactive communication and engagement.</li>
                         </ul>
                     </div>
                 </div>
@@ -149,8 +140,8 @@
                         <p class="date">May 2023 – Jul 2023</p>
                         <p class="role">Software Development Intern — Rwanda Space Agency</p>
                         <ul class="job-desc">
-                            <li>Refactored frontend modules to improve application performance and reduce page load time by 20%.</li>
-                            <li>Built React-based UI components for geospatial data visualization supporting Earth Observation and SDG-focused analytics.</li>
+                            <li>Improved application performance by refactoring frontend modules.</li>
+                            <li>Built React UI components for geospatial data visualization.</li>
                         </ul>
                     </div>
                 </div>
@@ -161,58 +152,63 @@
 </section>
 
 
-        <!-- Projects Section -->
-        <section id="projects" class="main-section" data-scroll-section>
-            <h2>Projects</h2>
-            <p>Check out some of my recent projects on Github.</p>
-            <div class="swiper-container swiper-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url('/path/to/image1.jpg')"></div>
-                    <div class="swiper-slide" style="background-image:url('/path/to/image2.jpg')"></div>
-                    <div class="swiper-slide" style="background-image:url('/path/to/image3.jpg')"></div>
-                </div>
-                <div class="swiper-pagination"></div>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="main-section" data-scroll-section>
+    <h2>Projects</h2>
+    <p>Check out some of my recent projects on Github.</p>
+
+    <div class="swiper-container swiper-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url('images/project1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('images/project2.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('images/project3.jpg')"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-5" data-scroll-section>
+    <div class="container">
+        <h2 class="text-center mb-4">Contact</h2>
+
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <a href="https://www.linkedin.com/in/bertrand-rusanganwa-433607276/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-5" data-scroll-section>
-            <div class="container">
-                <h2 class="text-center mb-4">Contact</h2>
-                <div class="row text-center">
-                    <div class="col-md-3 mb-4">
-                        <a href="https://www.linkedin.com/in/bertrand-rusanganwa-433607276/" target="_blank" class="social-icon">
-                            <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <a href="mailto:bertrandrusanganwa10@gmail.com" class="social-icon">
-                            <i class="bi bi-envelope" style="font-size: 2rem;"></i>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 mb-4">
-                        <a href="https://github.com/bertrandrusa" target="_blank" class="social-icon">
-                            <i class="bi bi-github" style="font-size: 2rem;"></i>
-                        </a>
-                    </div>
-
-                    <div class="col-md-3 mb-4">
-                        <a href="https://www.instagram.com/bertrand_rusa/" target="_blank" class="social-icon">
-                            <i class="bi bi-instagram" style="font-size: 2rem;"></i>
-                        </a>
-                    </div>
-
-                </div>
+            <div class="col-md-3 mb-4">
+                <a href="mailto:bertrandrusanganwa10@gmail.com">
+                    <i class="bi bi-envelope"></i>
+                </a>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <div>© Built and designed by Bertrand.</div>
-        <div>All rights reserved.</div>
-    </footer>
+            <div class="col-md-3 mb-4">
+                <a href="https://github.com/bertrandrusa" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <a href="https://www.instagram.com/bertrand_rusa/" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div>© Built and designed by Bertrand.</div>
+</footer>
+
+<!-- LOAD YOUR JS -->
+<script src="main.js"></script>
 
 </body>
-
 </html>
