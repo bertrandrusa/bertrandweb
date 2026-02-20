@@ -1,72 +1,299 @@
 /* =======================
-   DARK MODE (fallback)
+   GLOBAL
    ======================= */
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+    background-color: #fbfbf0;
+    color: #2f2f2f;
+    transition: background-color 0.4s, color 0.4s;
+    width: 100%;
+}
+
 body.dark-mode {
     background-color: #2f2f2f;
     color: #f6f6dc;
 }
 
-body.dark-mode header.top-bar {
-    background-color: #2f2f2f;
+
+/* =======================
+   NAVBAR
+   ======================= */
+
+header.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+    z-index: 100;
 }
 
-body.dark-mode footer {
-    background-color: #2f2f2f;
-    color: #f6f6dc;
+.logo {
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo:hover {
+    color: #007bff;
+}
+
+nav.nav-bar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.nav-bar li {
+    margin: 0 1rem;
+}
+
+nav.nav-bar a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: inherit;
+    transition: 0.2s;
+}
+
+nav.nav-bar a:hover {
+    color: #007bff;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 
 /* =======================
-   MOBILE NAV (works w/ your CSS)
+   MOBILE NAV
    ======================= */
+
 @media (max-width: 768px) {
+
     nav.nav-bar ul {
-        border: 1px solid rgba(0,0,0,0.08);
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 70px;
+        background: #fbfbf0;
+        padding: 1rem;
         border-radius: 12px;
+        border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    nav.nav-bar ul.active {
+        display: flex;
     }
 
     body.dark-mode nav.nav-bar ul {
-        background-color: #2f2f2f;
-        border-color: rgba(246,246,220,0.25);
+        background: #2f2f2f;
+        border-color: rgba(255,255,255,0.2);
+    }
+
+    .hamburger {
+        display: block;
     }
 }
 
 
 /* =======================
-   COMPANY LOGOS (clean)
+   HOME
    ======================= */
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 300px;
+    border-radius: 8px;
+    border: 3px solid #ddd;
+}
+
+.header-text {
+    padding: 20px;
+    max-width: 500px;
+}
+
+.main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+
+/* =======================
+   SECTIONS
+   ======================= */
+
+.main-section {
+    padding: 5rem 2rem;
+    min-height: 100vh;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* =======================
+   ABOUT
+   ======================= */
+
+#about {
+    background: #f8f9fa;
+}
+
+body.dark-mode #about {
+    background: #353535;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-video video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* =======================
+   EXPERIENCE
+   ======================= */
+
+.resume-content {
+    display: flex;
+    justify-content: center;
+}
+
+.experience {
+    max-width: 800px;
+    width: 100%;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.experience-item:hover {
+    background: rgba(0,0,0,0.03);
+}
+
+body.dark-mode .experience-item:hover {
+    background: rgba(255,255,255,0.05);
+}
+
 .company-logo {
-    width: 80px;          /* smaller than 100 so it fits nicer */
+    width: 80px;
     height: 80px;
     object-fit: contain;
     border-radius: 12px;
     background: #fff;
     padding: 8px;
     border: 1px solid rgba(0,0,0,0.08);
+    margin-right: 15px;
 }
 
 body.dark-mode .company-logo {
     background: #3a3a3a;
-    border-color: rgba(246,246,220,0.18);
+}
+
+.experience-details {
+    text-align: left;
+}
+
+.date {
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.role {
+    font-weight: 700;
+    margin: 3px 0;
+}
+
+.job-desc {
+    margin-top: 6px;
+    padding-left: 18px;
+}
+
+.job-desc li {
+    margin-bottom: 5px;
 }
 
 
 /* =======================
-   SWIPER (match your JS)
+   PROJECTS (SWIPER)
    ======================= */
+
 .swiper-slider,
-.swiper,
-.swiper-container {
+.swiper {
     width: 100%;
     padding: 2rem 0;
 }
 
 .swiper-slide {
-    background-size: cover;
-    background-position: center;
     height: 320px;
     border-radius: 16px;
-    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
 
+/* =======================
+   CONTACT
+   ======================= */
+
+#contact i {
+    color: inherit;
+    transition: 0.2s;
+}
+
+#contact i:hover {
+    color: #007bff;
+}
+
+
+/* =======================
+   FOOTER
+   ======================= */
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    font-weight: 500;
+    background: #fff;
+}
+
+body.dark-mode footer {
+    background: #2f2f2f;
+}
