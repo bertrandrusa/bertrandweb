@@ -17,6 +17,92 @@ body.dark-mode {
     color: #f6f6dc;
 }
 
+/* ===========================
+   RESUME 3D BUTTON
+   =========================== */
+
+.container-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "bt-1 bt-2 bt-3"
+    "bt-4 bt-5 bt-6";
+  position: relative;
+  perspective: 800px;
+  width: 160px;
+  height: 50px;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-button:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-1 { grid-area: bt-1; }
+.bt-2 { grid-area: bt-2; }
+.bt-3 { grid-area: bt-3; }
+.bt-4 { grid-area: bt-4; }
+.bt-5 { grid-area: bt-5; }
+.bt-6 { grid-area: bt-6; }
+
+.resume-btn {
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 50px;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.bt-1:hover ~ .resume-btn {
+  transform: rotateX(15deg) rotateY(-15deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.bt-3:hover ~ .resume-btn {
+  transform: rotateX(15deg) rotateY(15deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.bt-4:hover ~ .resume-btn {
+  transform: rotateX(-15deg) rotateY(-15deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.bt-6:hover ~ .resume-btn {
+  transform: rotateX(-15deg) rotateY(15deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.resume-btn:hover::before {
+  background-color: #f19c2b;
+}
+
 
 /* =======================
    NAVIGATION BAR
