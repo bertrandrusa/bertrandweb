@@ -32,8 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+document.querySelectorAll(".container-button").forEach((wrap) => {
+  const link = wrap.querySelector(".resume-btn");
+  if (!link) return;
 
+  wrap.addEventListener("click", (e) => {
+    // if user clicks anywhere on the 3D button area, open the link
+    window.open(link.href, "_blank");
+  });
+});
 
+   
   /* =========================
      DARK MODE TOGGLE (GSAP + fallback)
      ========================= */
