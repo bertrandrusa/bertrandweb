@@ -18,7 +18,7 @@ body.dark-mode {
 }
 
 /* ===========================
-   3D RESUME BUTTON (BLUE)
+   3D RESUME BUTTON (SITE BLUE)
    =========================== */
 
 .container-button{
@@ -33,14 +33,12 @@ body.dark-mode {
   width:170px;
   height:52px;
   margin-top:15px;
-  transition:transform 0.2s ease;
 }
 
 .container-button:active{
   transform:scale(0.96);
 }
 
-/* Hover grid zones */
 .hover{
   position:relative;
   width:100%;
@@ -55,7 +53,6 @@ body.dark-mode {
 .bt-5{ grid-area:bt-5; }
 .bt-6{ grid-area:bt-6; }
 
-/* Actual button */
 .resume-btn{
   position:absolute;
   inset:0;
@@ -66,7 +63,6 @@ body.dark-mode {
   text-decoration:none;
   font-size:17px;
   font-weight:900;
-  letter-spacing:0.5px;
 
   border:3px solid #007bff;
   border-radius:14px;
@@ -76,7 +72,7 @@ body.dark-mode {
   transform-style:preserve-3d;
 }
 
-/* Button background layer */
+/* BLUE BACKGROUND */
 .resume-btn::before{
   content:"";
   position:absolute;
@@ -87,34 +83,32 @@ body.dark-mode {
   transition:all 0.25s ease;
 }
 
-/* ===== 3D Tilt Directions ===== */
-
+/* 3D TILT */
 .bt-1:hover ~ .resume-btn{
   transform:rotateX(14deg) rotateY(-14deg);
-  box-shadow:-3px -3px 0 #003f8a;
+  box-shadow:-3px -3px 0 #0056b3;
 }
 
 .bt-3:hover ~ .resume-btn{
   transform:rotateX(14deg) rotateY(14deg);
-  box-shadow:3px -3px 0 #003f8a;
+  box-shadow:3px -3px 0 #0056b3;
 }
 
 .bt-4:hover ~ .resume-btn{
   transform:rotateX(-14deg) rotateY(-14deg);
-  box-shadow:-3px 3px 0 #003f8a;
+  box-shadow:-3px 3px 0 #0056b3;
 }
 
 .bt-6:hover ~ .resume-btn{
   transform:rotateX(-14deg) rotateY(14deg);
-  box-shadow:3px 3px 0 #003f8a;
+  box-shadow:3px 3px 0 #0056b3;
 }
 
-/* Hover color change */
+/* HOVER DARKER BLUE */
 .container-button:hover .resume-btn::before{
   background:#0056b3;
 }
 
-/* Smooth reset */
 .container-button:not(:hover) .resume-btn{
   transform:rotateX(0) rotateY(0);
 }
