@@ -308,7 +308,7 @@ export default function App() {
                 transition={{ duration: 0.9, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
               >
                 <img
-                  src="/images/profile.jpg"
+                  src="/public/images/profile.jpg"
                   alt="Bertrand Rusanganwa"
                   className="portrait-image"
                 />
@@ -553,10 +553,10 @@ export default function App() {
               <p>I&apos;m open to software engineering, data, and infrastructure opportunities.</p>
 
               <div className="contact-links">
-                <a href="mailto:bertrandrusanganwa10@gmail.com">
+                <a href="mailto:rusanganwabertrand10@gmail.com">
                   <span>01</span>
                   <small>Email</small>
-                  <strong>bertrandrusanganwa10@gmail.com</strong>
+                  <strong>rusanganwabertrand10@gmail.com</strong>
                   <Mail aria-hidden="true" />
                 </a>
                 <a href="https://www.linkedin.com/in/bertrand-rusanganwa-433607276/" target="_blank" rel="noreferrer">
@@ -575,7 +575,7 @@ export default function App() {
             </Reveal>
 
             <footer>
-              <span>© 2026 — All rights reserved</span>
+              <span>© 2025 — All rights reserved</span>
               <span>Designed &amp; built by Bertrand</span>
             </footer>
           </div>
