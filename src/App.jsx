@@ -308,7 +308,7 @@ export default function App() {
                 transition={{ duration: 0.9, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
               >
                 <img
-                  src="/public/images/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}images/profile.jpg`}
                   alt="Bertrand Rusanganwa"
                   className="portrait-image"
                 />
