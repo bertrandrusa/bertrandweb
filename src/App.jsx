@@ -13,19 +13,27 @@ const navItems = [
   { id: "contact", label: "contact" },
 ];
 
-const skills = [
-  ["PY", "Python"],
-  ["TS", "TypeScript"],
-  ["RE", "React"],
-  ["SQL", "PostgreSQL"],
-  ["DK", "Docker"],
-  ["FA", "FastAPI"],
-  ["ND", "Node.js"],
-  ["PD", "Pandas"],
-  ["PW", "Playwright"],
-  ["AI", "AI / ML"],
-  ["GT", "Git"],
-  ["LX", "Linux"],
+const skillGroups = [
+  {
+    mark: "AI",
+    title: "AI & Data",
+    skills: ["RAG systems", "Llama models", "FAISS", "LangChain", "Pandas", "OCR pipelines"],
+  },
+  {
+    mark: "SEC",
+    title: "Security Foundations",
+    skills: ["Secure coding", "Authentication", "Access control", "Audit logging", "Backups & recovery", "Cybersecurity fundamentals"],
+  },
+  {
+    mark: "SYS",
+    title: "Systems & Infrastructure",
+    skills: ["Linux", "Docker", "PostgreSQL", "TCP/IP & HTTP/S", "Git & CI/CD", "Windows"],
+  },
+  {
+    mark: "DEV",
+    title: "Software Engineering",
+    skills: ["Python", "JavaScript / TypeScript", "React", "FastAPI", "Node.js", "SQL"],
+  },
 ];
 
 const experiences = [
@@ -35,11 +43,11 @@ const experiences = [
     location: "Springfield, MO · Hybrid",
     date: "Jan 2026 — Apr 2026",
     summary:
-      "Built automated data pipelines, improved PostgreSQL performance, and containerized backend services for reliable, repeatable deployment.",
+      "Built reliable backend and data systems using Python, PostgreSQL, Docker, and Linux, with an emphasis on automation, auditability, backups, and recoverability.",
     bullets: [
       "Developed Python, Pandas, and SQL ETL pipelines for PDF and web data.",
       "Optimized PostgreSQL queries, indexing strategies, and schema design.",
-      "Containerized backend and data-processing services with Docker.",
+      "Built Dockerized services and supported authenticated backup workflows, scheduled jobs, and audit logging.",
     ],
   },
   {
@@ -91,11 +99,11 @@ const projects = [
   },
   {
     number: "03",
-    title: "Data Operations Platform",
+    title: "Secure Data Operations",
     date: "2026",
     description:
-      "A Dockerized backup and data-processing platform with PostgreSQL, incremental synchronization, scheduling, and audit logging.",
-    tags: ["Docker", "PostgreSQL", "PHP", "Linux"],
+      "A Dockerized Linux and PostgreSQL platform with authenticated access, incremental backups, scheduled jobs, audit logging, and recovery-oriented workflows.",
+    tags: ["Security", "Docker", "PostgreSQL", "Linux", "Audit Logs"],
     href: null,
   },
 ];
@@ -278,7 +286,7 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <span /> Available for software, data &amp; infrastructure roles
+              <span /> Available for AI, cybersecurity, software &amp; infrastructure roles
             </motion.div>
 
             <div className="hero-layout">
@@ -296,8 +304,8 @@ export default function App() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                  <strong>Software Engineer · Data &amp; Infrastructure</strong>
-                  Building thoughtful systems, useful interfaces, and dependable data workflows.
+                  <strong>AI · Software Engineering · Cybersecurity</strong>
+                  Building intelligent, secure systems and protecting the software, infrastructure, and data behind them.
                 </motion.p>
               </div>
 
@@ -347,17 +355,17 @@ export default function App() {
             <div className="about-layout">
               <Reveal className="about-lead">
                 <p>
-                  I make <em>useful, thoughtful</em> software—and I care about how it works and how it feels.
+                  I build <em>intelligent, secure</em> systems—and I care how they work, how they feel, and how they hold up.
                 </p>
               </Reveal>
               <Reveal className="about-body" delay={0.08}>
                 <p>
-                  I&apos;m Bertrand, a Computer Science graduate from Missouri State University with minors in Mathematics and Cybersecurity. My work crosses software engineering, data pipelines, backend systems, AI, and web design.
+                  I&apos;m Bertrand, a Computer Science graduate from Missouri State University with minors in Mathematics and Cybersecurity. I combine software engineering with AI, Linux, databases, infrastructure, and secure-system practices to build dependable technology.
                 </p>
                 <p>
-                  I enjoy turning complicated workflows into clear, dependable tools—whether that means optimizing a database, building a retrieval system, or designing an interface people actually want to use.
+                  My experience includes retrieval-augmented AI, Python automation, Dockerized services, PostgreSQL optimization, authenticated applications, audit logging, backups, and recovery workflows. I&apos;m growing toward security operations, cloud security, vulnerability assessment, and secure software development.
                 </p>
-                <a href="/Bertrand_resume.pdf" target="_blank" rel="noreferrer" className="text-link">
+                <a href="https://github.com/bertrandrusa/bertrandweb/raw/refs/heads/main/Bertrand_resume.pdf" target="_blank" rel="noreferrer" className="text-link">
                   Read my full resume <ArrowUpRight aria-hidden="true" />
                 </a>
               </Reveal>
@@ -381,7 +389,7 @@ export default function App() {
               <div>
                 <p className="education-school">Missouri State University</p>
                 <h3>B.S. Computer Science</h3>
-                <p>Minors in Mathematics &amp; Cybersecurity · Springfield, Missouri</p>
+                <p>Minors in Mathematics &amp; Cybersecurity · Focused on operating systems, secure computing, and technical problem solving</p>
               </div>
               <dl>
                 <div>
@@ -402,25 +410,30 @@ export default function App() {
             <Reveal>
               <SectionHeading
                 number="04"
-                title="Tools of the"
-                accent="trade"
-                kicker="Languages, frameworks & platforms"
+                title="Capabilities"
+                accent="across systems"
+                kicker="AI, security, infrastructure & software"
               />
             </Reveal>
 
-            <div className="skills-grid">
-              {skills.map(([mark, label], index) => (
-                <motion.div
-                  key={label}
-                  className="skill-cell"
-                  initial={{ opacity: 0, y: 20 }}
+            <div className="skill-groups">
+              {skillGroups.map((group, index) => (
+                <motion.article
+                  key={group.title}
+                  className="skill-group"
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.45, delay: (index % 4) * 0.05 }}
+                  transition={{ duration: 0.55, delay: index * 0.07 }}
                 >
-                  <span>{mark}</span>
-                  <p>{label}</p>
-                </motion.div>
+                  <div className="skill-group-heading">
+                    <span>{group.mark}</span>
+                    <h3>{group.title}</h3>
+                  </div>
+                  <ul>
+                    {group.skills.map((skill) => <li key={skill}>{skill}</li>)}
+                  </ul>
+                </motion.article>
               ))}
             </div>
           </div>
@@ -491,7 +504,7 @@ export default function App() {
                 number="06"
                 title="Selected"
                 accent="work"
-                kicker="Projects, experiments & useful systems"
+                kicker="AI systems, secure infrastructure & useful software"
               />
             </Reveal>
 
@@ -550,7 +563,7 @@ export default function App() {
               <h3>
                 Let&apos;s build something <em>worth remembering.</em>
               </h3>
-              <p>I&apos;m open to software engineering, data, and infrastructure opportunities.</p>
+              <p>I&apos;m open to AI, cybersecurity, software engineering, cloud, and infrastructure opportunities.</p>
 
               <div className="contact-links">
                 <a href="mailto:rusanganwabertrand10@gmail.com">
